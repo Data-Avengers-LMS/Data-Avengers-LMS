@@ -19,7 +19,7 @@ const compat = new FlatCompat({
  * @type {import("eslint").Linter.Config[]} */
 export const config = [
   ...baseConfig,
-  ...compat.extends("airbnb/hooks"),
+  ...compat.extends("airbnb", "airbnb-typescript"),
   {
     ...pluginReact.configs.flat.recommended,
     languageOptions: {

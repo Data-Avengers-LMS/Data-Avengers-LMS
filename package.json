@@ -28,7 +28,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
+      "bash -c 'if [[ \"$0\" != *\"/packages/eslint-config/\"* ]]; then eslint --fix \"$0\"; fi'",
       "prettier --write"
     ],
     "*.{json,md}": [
