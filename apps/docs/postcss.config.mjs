@@ -1,0 +1,1 @@
+export { default} from "@repo/tailwind-next/postcss.config.mjs"
