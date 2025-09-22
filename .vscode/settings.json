@@ -1,9 +1,6 @@
 {
-  "eslint.experimental.useFlatConfig": true,
-  "eslint.validate": [
-    "typescript",
-    "typescriptreact"
-  ],
+  "eslint.useFlatConfig": true,
+  "eslint.validate": ["typescript", "typescriptreact"],
   "eslint.run": "onType",
   "eslint.enable": true,
   "eslint.workingDirectories": [
