@@ -1,6 +1,6 @@
-import { type JSX } from "react";
+import React, { type JSX } from "react";
 
-export function Card({
+export default function Card({
   className,
   title,
   children,

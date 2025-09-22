@@ -1,6 +1,6 @@
-import { type JSX } from "react";
+import React, { type JSX } from "react";
 
-export function Code({
+export default function Code({
   children,
   className,
 }: {
