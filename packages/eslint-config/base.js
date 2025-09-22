@@ -41,8 +41,8 @@ export const config = [
           allowTemplateLiterals: true,
         },
       ],
-      // Ensure JSX uses single quotes too
-      'jsx-quotes': ['error', 'prefer-single'],
+      // JSX attributes use double quotes (Airbnb standard)
+      'jsx-quotes': ['error', 'prefer-double'],
     },
   },
 
@@ -77,8 +77,8 @@ export const config = [
           allowTemplateLiterals: true,
         },
       ],
-      // Ensure JSX uses single quotes too
-      'jsx-quotes': ['error', 'prefer-single'],
+      // JSX attributes use double quotes (Airbnb standard)
+      'jsx-quotes': ['error', 'prefer-double'],
     },
   },
 

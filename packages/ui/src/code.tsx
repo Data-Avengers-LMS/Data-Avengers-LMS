@@ -1,4 +1,4 @@
-import React, { type JSX } from "react";
+import React, { type JSX } from 'react';
 
 export default function Code({
   children,
