@@ -1,0 +1,18 @@
+{
+  "extends": "@repo/typescript-config/base.json",
+  "compilerOptions": {
+    "outDir": "./JS",
+    "baseUrl": ".",
+    "paths": {
+      "@app/*": ["./app/*"],
+      "@config/*": ["./config/*"],
+      "@helper/*": ["./helper/*"],
+      "@controller/*": ["./controller/*"],
+      "@models/*": ["./models/*"],
+      "@utils/*": ["./utils/*"],
+      "@server/*": ["./server/*"],
+      "@environment/*": ["./environment/*"]
+    },
+  },
+  "exclude": ["node_modules"]
+}
