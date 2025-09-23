@@ -1,1 +1,1 @@
-export { default } from "@repo/tailwind-next/postcss.config.mjs";
+export { default } from "@repo/shadcn-next/postcss.config.mjs";
