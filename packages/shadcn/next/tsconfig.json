@@ -1,0 +1,17 @@
+{
+  "extends": "@repo/typescript-config/nextjs.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": [
+    "./postcss.config.mjs",
+    "./src",
+    "./styles/globals.css",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": ["next/node_modules", "dist"]
+}

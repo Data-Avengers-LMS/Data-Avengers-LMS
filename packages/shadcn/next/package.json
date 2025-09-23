@@ -1,19 +1,21 @@
 {
-  "name": "@repo/tailwind-next",
+  "name": "@repo/shadcn-next",
   "version": "1.0.0",
   "description": "Tailwind setup for next js project",
-  "private":true,
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "exports" : {
-    "./globals.css": "./globals.css",
-    "./postcss.config.mjs": "./postcss.config.mjs"
+  "exports": {
+    "./globals.css": "./styles/globals.css",
+    "./postcss.config.mjs": "./postcss.config.mjs",
+    "./components/ui/*": "./src/components/ui/*.tsx"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@radix-ui/react-slot": "^1.2.3",
     "@tailwindcss/postcss": "^4.1.13",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.13"

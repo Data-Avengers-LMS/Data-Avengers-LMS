@@ -10,11 +10,20 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-      "@repo/typescript-config": "workspace:*"
+    "@repo/typescript-config": "workspace:*",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "morgan": "^1.10.1"
   },
-
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
-    "eslint": "^9.34.0"
+    "@types/cookie-parser": "^1.4.9",
+    "@types/express": "^5.0.3",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "^22.15.3",
+    "eslint": "^9.34.0",
+    "eslint-import-resolver-typescript": "^4.4.4"
   }
 }
