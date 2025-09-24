@@ -3,7 +3,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./*"],
+      "@/lib/utils": ["./lib/utils.ts"]
     }
   },
   "include": [
@@ -11,7 +12,8 @@
     "./src",
     "./styles/globals.css",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "./lib/utils.ts"
   ],
   "exclude": ["next/node_modules", "dist"]
 }

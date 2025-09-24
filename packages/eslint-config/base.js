@@ -2,6 +2,7 @@ import js from '@eslint/js';
 import { FlatCompat } from '@eslint/eslintrc';
 import eslintConfigPrettier from 'eslint-config-prettier';
 import turboPlugin from 'eslint-plugin-turbo';
+import importPlugin from 'eslint-plugin-import';
 import tseslint from 'typescript-eslint';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -28,10 +29,12 @@ export const config = [
   {
     plugins: {
       turbo: turboPlugin,
+      import: importPlugin,
     },
     rules: {
       'turbo/no-undeclared-env-vars': 'warn',
       'import/prefer-default-export': 'off',
+      'import/no-unresolved': 'off',
       // Force single quotes
       quotes: [
         'error',
@@ -57,6 +60,7 @@ export const config = [
     },
     plugins: {
       '@typescript-eslint': tseslint.plugin,
+      import: importPlugin,
     },
     rules: {
       ...tseslint.configs.recommended.rules,
@@ -79,6 +83,15 @@ export const config = [
       ],
       // JSX attributes use double quotes (Airbnb standard)
       'jsx-quotes': ['error', 'prefer-double'],
+      // Never require extensions for TypeScript files
+      'import/extensions': [
+        'error',
+        'ignorePackages',
+        {
+          ts: 'never',
+          tsx: 'never',
+        },
+      ],
     },
   },
 

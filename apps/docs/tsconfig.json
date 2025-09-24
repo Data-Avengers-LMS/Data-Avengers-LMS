@@ -3,8 +3,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@repo/shadcn-next/*": ["../../packages/shadcn/next/*"],
-      "@repo/ui/*": ["../../packages/ui/src/*"],
+      "@repo/shadcn-next/*": ["../../packages/shadcn/next/src/components/ui/*"],
       "@repo/*": ["../../packages/*"],
       "@theme-provider": ["./app/components/theme-provider"],
       "@/*": ["./app/*"]
