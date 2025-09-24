@@ -11,9 +11,6 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@repo/typescript-config": "workspace:*"
-  },
-  "dependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*"
   },

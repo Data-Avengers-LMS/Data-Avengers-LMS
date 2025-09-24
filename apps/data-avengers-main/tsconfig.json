@@ -1,12 +1,11 @@
 {
   "extends": "@repo/typescript-config/nextjs.json",
-  
   "compilerOptions": {
     "baseUrl": ".",
-   "paths": {
-      "@repo/tailwind-next/*": ["../../packages/tailwind/next/*"],
-      "@repo/ui/*": ["../../packages/ui/src/*"],
-      "@repo/*": ["../../packages/*"],
+    "paths": {
+      "@repo/shadcn-next/*": ["../../packages/shadcn/next/components/ui/*.tsx"],
+      "@theme-provider": ["./app/components/theme-provider"],
+      "@/lib/utils": ["../../packages/shadcn/next/lib/utils.ts"],
       "@/*": ["./app/*"]
     },
     "plugins": [
@@ -22,7 +21,5 @@
     "next.config.js",
     ".next/types/**/*.ts"
   ],
-  "exclude": [
-    "node_modules" , "postcss.config.js"
-  ]
+  "exclude": ["node_modules", "postcss.config.js"]
 }
