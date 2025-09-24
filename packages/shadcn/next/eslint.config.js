@@ -1,8 +1,8 @@
-import { nextJsConfig } from '@repo/eslint-config/next-js';
+import { config } from '@repo/eslint-config/base';
 
 /** @type {import("eslint").Linter.Config} */
-export default config = [
-  ...nextJsConfig,
+export default [
+  ...config,
   {
     rules: {
       'import/extensions': 'off',
