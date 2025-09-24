@@ -4,7 +4,6 @@ import * as React from 'react';
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { Button } from '@repo/shadcn-next/button';
-
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -36,5 +35,20 @@ export function ModeToggle() {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
+  );
+}
+
+// Default export required by Next.js for page components
+export default function HomePage() {
+  return (
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold mb-8">Welcome to Docs</h1>
+        <p className="text-muted-foreground mb-8">
+          Test your theme toggle functionality
+        </p>
+        <ModeToggle />
+      </div>
+    </div>
   );
 }
