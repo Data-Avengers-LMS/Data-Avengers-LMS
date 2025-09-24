@@ -31,6 +31,15 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
+          themes={[
+            'light',
+            'dark',
+            'data-avengers',
+            'peace',
+            'ocean',
+            'gold',
+            'system',
+          ]}
         >
           {children}
         </ThemeProvider>
