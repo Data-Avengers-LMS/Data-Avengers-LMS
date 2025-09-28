@@ -1,0 +1,50 @@
+
+
+model Course{
+    id String @id @default(cuid())
+    title String
+    slug String @unique
+    price Float
+    tags String[]
+    modules Module[]
+    createdAt DateTime @default(now())
+}
+
+model Module{
+    id String @id @default(cuid())
+    title String
+    courseId String
+    course Course    @relation(fields: [courseId],references: [id])
+    articles Articles[]
+    videos Video[]
+    mcqs MCQ[]
+    revisions Revision[]
+}
+
+model Articles{
+    id String @unique
+    title String
+    contentMd String
+    moduleId String
+    module Module @relation(fields: [moduleId],references: [id])
+
+}
+
+model Video{
+    id String @id @default(cuid())
+    title String
+    googleDriveUrl String
+    moduleId String
+    module Module @relation(fields: [moduleId],references: [id])
+}
+
+model Revision{
+    id String @id @default(cuid())
+    userID String
+    user User @relation(fields: [userID],references: [id])
+    moduleId String 
+    module Module @relation(fields: [moduleId],references: [id])
+    flag Boolean @default(false)
+    date DateTime
+    
+}

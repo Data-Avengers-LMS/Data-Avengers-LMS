@@ -1,0 +1,22 @@
+
+model MCQ{
+  id String @id @default(cuid())
+  question String
+  options String[]
+  correct String
+  solution String
+  moduleId String
+  module Module @relation(fields: [moduleId],references: [id])
+
+}
+
+model MCQAttempt{
+    id String   @id @default(cuid())
+    userId  String 
+    user User @relation(fields: [userId],references: [id])
+    mcqId  String
+    selected String
+    correct Boolean
+    attempted DateTime @default(now())
+    retry Int   @default(0)
+}
