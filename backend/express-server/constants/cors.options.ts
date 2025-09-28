@@ -1,18 +1,19 @@
-import { env } from "@environments/environment";
+/* eslint-disable no-unused-vars */
+import { env } from '@environments/environment.js';
 
 export const corsOptions = {
   origin: (
-    origin : string| undefined,
+    origin: string | undefined,
     callback: (err: Error | null, status: boolean) => void
   ) => {
     if (origin === env.CLIENT_ORIGIN || !origin) {
       callback(null, true);
     } else {
-      callback(new Error("Not allowed by CORS"), false);
+      callback(new Error('Not allowed by CORS'), false);
     }
   },
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
-  allowedHeaders: ["Content-Type", "Authorization"],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
   optionsSuccessStatus: 204,
 };

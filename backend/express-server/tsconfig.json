@@ -4,8 +4,11 @@
     "outDir": "./JS",
     "baseUrl": ".",
     "paths": {
-    "@*": ["./*"]
-    },
+      "@app/*": ["./app/*"],
+      "@constants/*": ["./constants/*"],
+      "@environments/*": ["./environments/*"],
+      "@server/*": ["./server/*"]
+    }
   },
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "JS"]
 }
