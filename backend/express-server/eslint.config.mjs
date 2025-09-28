@@ -5,7 +5,8 @@ export default [
   ...config,
   {
     rules: {
-      'import/no-unresolved': 'off'
+      'import/no-unresolved': 'off',
+      'no-console': 'off'
     }
   }
 ];
