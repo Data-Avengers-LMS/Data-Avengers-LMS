@@ -1,7 +1,5 @@
-/* eslint-disable no-console */
-
 import http from 'http';
-import { app } from '@app/app';
+import { app } from '@app/app.js';
 
 process.on('uncaughtException', (err) => {
   console.error('Uncaught Exception:', err);

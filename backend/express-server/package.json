@@ -2,9 +2,11 @@
   "name": "express-server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "dev": "ts-node -r tsconfig-paths/register server/server.ts"
+    "build": "tsc && pnpm dlx tsc-alias",
+    "dev": "pnpm run build &&cross-env NODE_ENV=development nodemon ./JS/server/server.js",
+    "start:prod": "pnpm run build && cross-env NODE_ENV=production node ./JS/server/server.js"
   },
   "keywords": [],
   "author": "",
@@ -12,23 +14,25 @@
   "dependencies": {
     "@prisma/client": "^6.16.2",
     "@repo/typescript-config": "workspace:*",
+    "@t3-oss/env-core": "^0.13.8",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
+    "cross-env": "^10.0.0",
     "dotenv": "^17.2.2",
     "express": "^5.1.0",
     "helmet": "^8.1.0",
-    "morgan": "^1.10.1"
+    "morgan": "^1.10.1",
+    "zod": "^4.1.11",
+    "@repo/eslint-config": "workspace:*"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
     "@types/cookie-parser": "^1.4.9",
     "@types/express": "^5.0.3",
     "@types/morgan": "^1.9.10",
     "@types/node": "^22.15.3",
     "eslint": "^9.34.0",
     "eslint-import-resolver-typescript": "^4.4.4",
-    "prisma": "^6.16.2",
-    "ts-node": "^10.9.2",
+    "nodemon": "^3.1.10",
     "typescript": "^5.9.2"
   }
 }
