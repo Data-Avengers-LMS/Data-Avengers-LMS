@@ -189,6 +189,10 @@ importers:
       socket.io:
         specifier: ^4.8.1
         version: 4.8.1
+    devDependencies:
+      nodemon:
+        specifier: ^3.0.0
+        version: 3.1.10
 
   packages/common:
     dependencies:
