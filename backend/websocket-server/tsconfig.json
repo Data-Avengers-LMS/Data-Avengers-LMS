@@ -1,0 +1,16 @@
+{
+  "extends": "@repo/typescript-config/base.json",
+  "compilerOptions": {
+    "outDir": "./JS",
+    "baseUrl": ".",
+    "paths": {
+      "@repo/zod-schemas/*": ["../../packages/common/JS/*"],
+      "@repo/express/*": ["../../backend/express-server/server/*"],
+      "@/types/*": ["../../packages/common/types/*"],
+      "@/class/*": ["./class/*"],
+      "@constants/*": ["../../packages/common/constants/*"],
+      "@utils/*": ["./utils/*"]
+    }
+  },
+  "exclude": ["node_modules", "JS"]
+}
