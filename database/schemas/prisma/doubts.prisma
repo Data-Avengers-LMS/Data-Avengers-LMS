@@ -11,11 +11,12 @@ model Doubt{
      createdAt DateTime @default(now())
 
 } 
-
-model DoubtResponse{
-    id String @id @default(cuid())
-    doubtId String
-    doubt Doubt @relation(fields: [doubtId],references: [id])
-    content String
+model DoubtResponse {
+    id       String   @id @default(cuid())
+    doubtId  String
+    userId   String  
+    user     User     @relation(fields: [userId], references: [id])
+    doubt    Doubt    @relation(fields: [doubtId], references: [id])
+    content  String
     createdAt DateTime @default(now())
 }

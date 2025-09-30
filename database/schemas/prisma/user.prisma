@@ -17,6 +17,15 @@ model User {
   createdAt    DateTime      @default(now())
   updatedAt    DateTime      @updatedAt
   userInfo     UserInfo?     // optional one-to-one relation
+  DoubtResponses DoubtResponse[]
+  tokens       Token[]
+  security     Security?
+  role          Role @default(USER)
+}
+
+enum Role {
+  USER
+  ADMIN
 }
 
 model UserInfo {
