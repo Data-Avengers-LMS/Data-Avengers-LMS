@@ -1,8 +1,8 @@
 import express from 'express';
-import morgan from 'morgan';
 import { type Application } from 'express';
 import cookieParser from 'cookie-parser';
 import helmet from 'helmet';
+import morgan from 'morgan';
 
 const app: Application = express();
 
@@ -11,6 +11,5 @@ app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 app.use(cookieParser());
 app.use(helmet());
-app.use(morgan('dev'));
 
 export { app };

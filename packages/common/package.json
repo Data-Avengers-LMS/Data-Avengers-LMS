@@ -1,0 +1,26 @@
+{
+  "name": "@repo/zod-schemas",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "build": "tsc && pnpm dlx tsc-alias"
+  },
+  "keywords": [],
+  "author": "srajansaxena",
+  "license": "ISC",
+  "exports": {
+    "./types/*": "./JS/types/*",
+    "./validated-events/*": "./JS/events/*",
+    "./environment/*": "./JS/environment/*",
+    "./helper/*": "./JS/helper/*",
+    "./constants/*": "./JS/constants/*",
+    "./paths/*": "./JS/paths/*",
+    "./conf/*": "./JS/conf/*"
+  },
+  "dependencies": {
+    "@t3-oss/env-core": "^0.13.8",
+    "dotenv": "^17.2.2",
+    "zod": "^4.1.11"
+  }
+}
