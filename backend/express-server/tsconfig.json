@@ -4,15 +4,11 @@
     "outDir": "./JS",
     "baseUrl": ".",
     "paths": {
-      "@app/*": ["./app/*.ts"],
-      "@config/*": ["./config/*.ts"],
-      "@helper/*": ["./helper/*.ts"],
-      "@controller/*": ["./controller/*.ts"],
-      "@models/*": ["./models/*.ts"],
-      "@utils/*": ["./utils/*.ts"],
-      "@server/*": ["./server/*.ts"],
-      "@environment/*": ["./environment/*.ts"]
+      "@repo/zod-schemas/*": ["../../packages/common/JS/*"],
+      "@app/*": ["./app/*"],
+      "@constants/*": ["./constants/*"],
+      "@server/*": ["./server/*"]
     }
   },
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "JS"]
 }
