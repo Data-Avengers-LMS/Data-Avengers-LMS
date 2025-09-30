@@ -7,7 +7,7 @@ process.on('uncaughtException', (err) => {
   process.exit(1);
 });
 
-const serverExpress = app.listen(6000, () => {
+const serverExpress = app.listen(env.HTTP_SERVER_PORT, () => {
   console.log(
     `Server is running on http://localhost:${env.HTTP_SERVER_PORT || 6000}`
   );
