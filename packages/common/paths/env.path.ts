@@ -3,22 +3,22 @@ import { fileURLToPath } from 'url';
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
-const projectRoot = join(dirname, '../..');
+const secretsPath = join(dirname, '../../secrets');
 
 // eslint-disable-next-line
 let envFilePath: string;
 
 switch (process.env.NODE_ENV) {
   case 'production':
-    envFilePath = join(projectRoot, './secrets/.env');
+    envFilePath = join(secretsPath, '.env');
     break;
 
   case 'development':
-    envFilePath = join(projectRoot, './secrets/.env.local');
+    envFilePath = join(secretsPath, '.env.local');
     break;
+
   default:
-    // Default to development env file if NODE_ENV is not set
-    envFilePath = join(projectRoot, './secrets/.env.local');
+    envFilePath = join(secretsPath, '.env.local');
     break;
 }
 

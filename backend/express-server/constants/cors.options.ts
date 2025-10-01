@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { env } from '@environments/environment.js';
+import { env } from '@repo/zod-schemas/environment/environments.z.js';
 
 export const corsOptions = {
   origin: (

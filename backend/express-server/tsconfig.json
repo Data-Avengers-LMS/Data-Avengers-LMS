@@ -4,9 +4,9 @@
     "outDir": "./JS",
     "baseUrl": ".",
     "paths": {
+      "@repo/zod-schemas/*": ["../../packages/common/JS/*"],
       "@app/*": ["./app/*"],
       "@constants/*": ["./constants/*"],
-      "@environments/*": ["./environments/*"],
       "@server/*": ["./server/*"]
     }
   },
