@@ -1,0 +1,45 @@
+model User {
+  id           String        @id @default(cuid())
+  name         String
+  email        String        @unique
+  passwordHash String
+  level        Int
+  coins        Int
+  referralCode String?
+  referenceBy  String?
+  mentorCalls  MentorCall[]
+  mcqAttempts  MCQAttempt[]
+  doubts       Doubt[]
+  feedbacks    Feedback[]
+  badges       UserBadge[]
+  scheduler    Scheduler?
+  revisions    Revision[]
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  userInfo     UserInfo?     // optional one-to-one relation
+  DoubtResponses DoubtResponse[]
+  tokens       Token[]
+  security     Security?
+  role          Role @default(USER)
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+model UserInfo {
+  id                     Int       @id @default(autoincrement())
+  userId                 String    @unique
+  IpAddress              String?
+  emailVerificationToken String?
+  loginToken             String?
+  forgotPasswordToken    String?
+  twoFAToken             String?   @map("2fa_token")
+  location               String?
+  lastLoginTime          DateTime? @map("last_login_time")
+  createdAt              DateTime  @default(now()) @map("created_at")
+  updatedAt              DateTime  @updatedAt @map("updated_at")
+  
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
