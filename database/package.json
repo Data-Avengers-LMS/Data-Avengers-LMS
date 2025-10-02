@@ -3,15 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "workspaces": [
-    "database",
-    "server"
-  ],
   "scripts": {
-    "prisma:generate": "prisma generate",
-    "prisma:push": "prisma db push",
-    "prisma:studio": "prisma studio",
-    "dev": "ts-node src/index.ts"
+    "prisma:generate": "pnpm dlx prisma generate",
+    "prisma:push": "pnpm dlx prisma db push",
+    "prisma:pull": "pnpm dlx prisma db pull",
+    "prisma:studio": "pnpm dlx prisma studio"
   },
   "keywords": [],
   "author": "",
