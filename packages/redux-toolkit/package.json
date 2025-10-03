@@ -6,7 +6,9 @@
   "main": "./JS/store/index.js",
   "types": "./JS/store/index.d.ts",
   "scripts": {
-    "build": "tsc && pnpm dlx tsc-alias"
+    "build": "tsc && pnpm dlx tsc-alias",
+    "lint": "eslint .",
+    "check-types": "tsc --noEmit"
   },
   "keywords": [],
   "author": "",
