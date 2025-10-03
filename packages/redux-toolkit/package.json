@@ -24,11 +24,11 @@
   "dependencies": {
     "@reduxjs/toolkit": "^2.9.0",
     "react-redux": "^9.2.0",
+    "@repo/typescript-config": "workspace:*",
+    "@repo/eslint-config": "workspace:*",
     "redux-persist": "^6.0.0"
   },
   "devDependencies": {
-    "@repo/typescript-config": "workspace:*",
-    "@repo/eslint-config": "workspace:*",
     "@types/react": "^19.1.0",
     "eslint": "^9.34.0",
     "typescript": "^5.9.2"
