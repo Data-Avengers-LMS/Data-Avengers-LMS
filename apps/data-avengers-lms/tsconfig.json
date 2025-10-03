@@ -5,6 +5,7 @@
     "baseUrl": ".",
     "paths": {
       "@repo/shadcn-next/*": ["../../packages/shadcn/next/*"],
+      "@repo/redux-toolkit/*": ["../../packages/redux-toolkit/*"],
       "@repo/*": ["../../packages/*"],
       "@theme-provider": ["./app/components/theme-provider"],
       "@/lib/utils": ["../../packages/shadcn/next/lib/utils"],

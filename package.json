@@ -8,6 +8,7 @@
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types",
+    "validate": "turbo run lint check-types build --filter='!@repo/redux-toolkit'",
     "prepare": "husky"
   },
   "dependencies": {

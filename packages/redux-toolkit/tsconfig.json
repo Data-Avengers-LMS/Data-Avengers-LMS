@@ -8,11 +8,11 @@
     "noEmit": false,
     "jsx": "react-jsx",
     "baseUrl": ".",
+    "skipLibCheck": true,
     "paths": {
-      "@/*": ["./*"],
       "@thunks/*": ["./thunks/*"],
       "@hooks/*": ["./hooks/*"],
-      "@types/*": ["./types/*"],
+      "@/types/*": ["./types/*"],
       "@store/*": ["./store/*"],
       "@extraReducers/*": ["./extraReducers/*"],
       "@slices/*": ["./slices/*"]
