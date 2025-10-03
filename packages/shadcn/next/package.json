@@ -10,7 +10,8 @@
   "exports": {
     "./postcss.config.mjs": "./postcss.config.mjs",
     "./globals.css": "./styles/globals.css",
-    "./ui/*": "./components/ui/*"
+    "./ui/*": "./components/ui/*",
+    "./lib/*": "./lib/*"
   },
   "dependencies": {
     "@radix-ui/react-dropdown-menu": "^2.1.16",

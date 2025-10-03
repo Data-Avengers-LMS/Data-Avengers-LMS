@@ -1,0 +1,23 @@
+{
+  "extends": "@repo/typescript-config/base.json",
+  "compilerOptions": {
+    "outDir": "./JS",
+    "rootDir": ".",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "noEmit": false,
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"],
+      "@thunks/*": ["./thunks/*"],
+      "@hooks/*": ["./hooks/*"],
+      "@types/*": ["./types/*"],
+      "@store/*": ["./store/*"],
+      "@extraReducers/*": ["./extraReducers/*"],
+      "@slices/*": ["./slices/*"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", "JS", "*.config.*"]
+}
