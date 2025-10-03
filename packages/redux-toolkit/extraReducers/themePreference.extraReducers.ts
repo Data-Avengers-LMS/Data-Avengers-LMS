@@ -1,6 +1,9 @@
 import { ActionReducerMapBuilder } from '@reduxjs/toolkit';
-import { PreferenceState } from '../types/themePreference.types';
-import { fetchPreferences, patchPreferences } from '../thunks/preference.thunk';
+import {
+  fetchPreferences,
+  patchPreferences,
+} from '@thunks/preference.thunk.js';
+import { PreferenceState } from '@/types/themePreference.types.js';
 
 export const addThemePreferenceExtraReducers = (
   builder: ActionReducerMapBuilder<PreferenceState>

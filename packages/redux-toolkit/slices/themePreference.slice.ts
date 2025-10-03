@@ -1,6 +1,6 @@
+import { addThemePreferenceExtraReducers } from '@extraReducers/themePreference.extraReducers.js';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { addThemePreferenceExtraReducers } from '@extraReducers/themePreference.extraReducers';
-import { PreferenceState, ThemeType } from '@/types/themePreference.types';
+import { PreferenceState, ThemeType } from '@/types/themePreference.types.js';
 
 const initialState: PreferenceState = {
   userDefaultedTheme: 'light',

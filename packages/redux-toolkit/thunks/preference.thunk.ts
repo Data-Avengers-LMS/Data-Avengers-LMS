@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { ThemeType } from '../types/themePreference.types';
+import { ThemeType } from '@/types/themePreference.types.js';
 
 // Generic thunk that accepts an API function as parameter
 export const fetchPreferences = createAsyncThunk<

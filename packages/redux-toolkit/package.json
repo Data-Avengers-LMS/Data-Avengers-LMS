@@ -18,7 +18,8 @@
     "./thunks/*": "./JS/thunks/*.js",
     "./types/*": "./JS/types/*.js",
     "./slices/*": "./JS/slices/*.js",
-    "./store/*": "./JS/store/*.js"
+    "./store/*": "./JS/store/*.js",
+    "./extraReducers/*": "./JS/extraReducers/*.js"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.9.0",

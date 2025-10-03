@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { preferenceReducer } from '@slices/themePreference.slice';
+import { preferenceReducer } from '@slices/themePreference.slice.js';
 
 import {
   persistStore,
