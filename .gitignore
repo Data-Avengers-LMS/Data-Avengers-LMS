@@ -158,7 +158,6 @@ dump.rdb
 # Docker
 .dockerignore
 Dockerfile*
-docker-compose*.yml
 
 # Backup files
 *.bak

@@ -16,6 +16,15 @@ const createInterfacialEnvironment = (path: string) => {
         .min(4, 'Port must be at least 4 characters long')
         .max(4, 'Port must be at most 5 characters long')
         .regex(/^\d+$/, 'Port must be a number'),
+      REDIS_HOST: z
+        .string()
+        .min(1, 'Redis host is required')
+        .default('localhost'),
+      REDIS_PORT: z
+        .string()
+        .regex(/^\d+$/, 'Port must be a number')
+        .transform(Number)
+        .default(6379),
     },
     clientPrefix: 'CLIENT',
     client: {

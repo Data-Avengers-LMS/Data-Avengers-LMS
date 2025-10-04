@@ -7,6 +7,7 @@
     "build": "tsc && pnpm dlx tsc-alias",
     "dev": "pnpm run build && cross-env NODE_ENV=development nodemon ./JS/server/server.js",
     "start:prod": "pnpm run build && cross-env NODE_ENV=production node ./JS/clusterManager/clusterManager.js",
+    "worker": "cross-env NODE_ENV=development node ./JS/redis/Workers/writeWorkers.js",
     "lint": "eslint .",
     "check-types": "tsc --noEmit"
   },
@@ -14,15 +15,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@repo/zod-schemas": "workspace:*",
+    "bullmq": "^5.60.0",
     "cookie-parser": "^1.4.7",
-    "@repo/eslint-config": "workspace:*",
     "cors": "^2.8.5",
     "cross-env": "^10.0.0",
     "express": "^5.1.0",
-    "morgan": "^1.10.1",
-    "helmet": "^8.1.0"
+    "helmet": "^8.1.0",
+    "ioredis": "^5.8.0",
+    "morgan": "^1.10.1"
   },
   "devDependencies": {
     "@types/cookie-parser": "^1.4.9",
