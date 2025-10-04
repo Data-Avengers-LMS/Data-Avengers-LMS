@@ -8,11 +8,11 @@ import {
   ReactNode,
 } from 'react';
 import { useTheme } from 'next-themes';
-import { ThemeType } from '@repo/redux-toolkit/types/themePreference.types';
 import {
   useAppDispatch,
   useAppSelector,
 } from '@repo/redux-toolkit/hooks/useTypedHooks';
+import { ThemeType } from '@repo/redux-toolkit/types/themePreference.types';
 import {
   setCurrentTheme,
   syncFromLocalStorage,

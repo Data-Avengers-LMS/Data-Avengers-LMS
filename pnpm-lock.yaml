@@ -45,6 +45,9 @@ importers:
       '@repo/shadcn-next':
         specifier: workspace:*
         version: link:../../packages/shadcn/next
+      '@repo/zod-schemas':
+        specifier: workspace:*
+        version: link:../../packages/common
       axios:
         specifier: ^1.12.2
         version: 1.12.2
@@ -88,9 +91,15 @@ importers:
 
   apps/data-avengers-main:
     dependencies:
+      '@repo/redux-toolkit':
+        specifier: workspace:*
+        version: link:../../packages/redux-toolkit
       '@repo/shadcn-next':
         specifier: workspace:*
         version: link:../../packages/shadcn/next
+      '@repo/zod-schemas':
+        specifier: workspace:*
+        version: link:../../packages/common
       lucide-react:
         specifier: ^0.544.0
         version: 0.544.0(react@19.1.0)
@@ -233,6 +242,9 @@ importers:
       dotenv:
         specifier: ^17.2.2
         version: 17.2.2
+      lucide-react:
+        specifier: ^0.544.0
+        version: 0.544.0(react@19.1.0)
       zod:
         specifier: ^4.1.11
         version: 4.1.11
@@ -336,6 +348,9 @@ importers:
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../../eslint-config
+      '@repo/zod-schemas':
+        specifier: workspace:*
+        version: link:../../common
       '@tailwindcss/postcss':
         specifier: ^4.1.13
         version: 4.1.13
@@ -351,6 +366,9 @@ importers:
       next:
         specifier: ^15.5.0
         version: 15.5.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      next-themes:
+        specifier: ^0.4.6
+        version: 0.4.6(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       postcss:
         specifier: ^8.5.6
         version: 8.5.6

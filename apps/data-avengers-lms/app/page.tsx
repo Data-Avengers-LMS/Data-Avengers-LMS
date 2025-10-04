@@ -1,12 +1,12 @@
-import { ModeToggle } from './components/themes/MenuToggle';
+import { ModeToggle } from '@repo/shadcn-next/components/ui/themes/MenuToggle';
 
 export default function Home() {
   return (
-    <div>
-      <ModeToggle />
-      <main className="flex min-h-screen flex-col items-center justify-center p-24">
-        This is from data avengers
-      </main>
-    </div>
+    <>
+      <div className="h-[100vh] w-[100vw] flex items-center flex-col justify-center">
+        <ModeToggle />
+        <div className="text-blue-300">srajan saxena</div>
+      </div>
+    </>
   );
 }
