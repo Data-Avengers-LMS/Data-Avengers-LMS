@@ -6,6 +6,6 @@
       "@repo/*": ["./packages/*"]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": ["**/*.ts", "**/*.tsx", "packages/shadcn/next/tailwind.config.js"],
   "exclude": ["node_modules", "dist", "build", ".next"]
 }

@@ -5,16 +5,16 @@
   "tsx": true,
   "tailwind": {
     "config": "",
-    "css": "src/styles/globals.css",
+    "css": "../../packages/shadcn/next/src/styles/globals.css",
     "baseColor": "stone",
     "cssVariables": true
   },
   "iconLibrary": "lucide",
   "aliases": {
-    "components": "@repo/shadcn-next/ui/components",
+    "components": "@/components",
+    "hooks": "@/hooks",
+    "lib": "@/lib",
     "utils": "@repo/shadcn-next/lib/utils",
-    "hooks": "@repo/shadcn-next/hooks",
-    "lib": "@repo/shadcn-next/lib",
-    "ui": "@repo/shadcn-next/ui/components"
+    "ui": "@repo/shadcn-next/components"
   }
 }

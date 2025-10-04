@@ -4,12 +4,11 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@repo/shadcn-next/*": ["../../packages/shadcn/next/*"],
-      "@repo/redux-toolkit/*": ["../../packages/redux-toolkit/*"],
+      "@repo/shadcn-next/*": ["../../packages/shadcn/next/src/*"],
+      "@repo/zod-schemas/*": ["../../packages/common/JS/*"],
+      "@repo/redux-toolkit/*": ["../../packages/redux-toolkit/JS/*"],
       "@theme-provider": ["./app/components/theme-provider"],
-      "@/lib/utils": ["../../packages/shadcn/next/lib/utils"],
-      "@repo/*": ["../../packages/*"]
-      // "@/*": ["./app/*"],
+      "@/*": ["./app/*"]
     },
     "plugins": [
       {

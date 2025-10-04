@@ -7,7 +7,8 @@
       "@repo/zod-schemas/*": ["../../packages/common/JS/*"],
       "@app/*": ["./app/*"],
       "@constants/*": ["./constants/*"],
-      "@server/*": ["./server/*"]
+      "@server/*": ["./server/*"],
+      "@cluster/*": ["./clusterManager/*"]
     }
   },
   "exclude": ["node_modules", "JS"]
