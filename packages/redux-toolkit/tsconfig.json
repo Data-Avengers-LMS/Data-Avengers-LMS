@@ -1,0 +1,17 @@
+{
+  "extends": "@repo/typescript-config/base.json",
+  "compilerOptions": {
+    "outDir": "./JS",
+    "baseUrl": ".",
+    "paths": {
+      "@thunks/*": ["./thunks/*"],
+      "@hooks/*": ["./hooks/*"],
+      "@/types/*": ["./types/*"],
+      "@store/*": ["./store/*"],
+      "@extraReducers/*": ["./extraReducers/*"],
+      "@slices/*": ["./slices/*"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", "JS"]
+}

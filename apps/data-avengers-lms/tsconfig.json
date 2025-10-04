@@ -5,10 +5,11 @@
     "baseUrl": ".",
     "paths": {
       "@repo/shadcn-next/*": ["../../packages/shadcn/next/*"],
-      "@repo/ui/*": ["../../packages/ui/src/*"],
-      "@repo/*": ["../../packages/*"],
+      "@repo/redux-toolkit/*": ["../../packages/redux-toolkit/*"],
       "@theme-provider": ["./app/components/theme-provider"],
-      "@/*": ["./app/*"]
+      "@/lib/utils": ["../../packages/shadcn/next/lib/utils"],
+      "@repo/*": ["../../packages/*"]
+      // "@/*": ["./app/*"],
     },
     "plugins": [
       {

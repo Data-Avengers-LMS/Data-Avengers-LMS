@@ -6,7 +6,9 @@
   "scripts": {
     "build": "tsc && pnpm dlx tsc-alias",
     "dev": "pnpm run build && cross-env NODE_ENV=development nodemon ./JS/server/server.js",
-    "start:prod": "pnpm run build && cross-env NODE_ENV=production node ./JS/clusterManager/clusterManager.js"
+    "start:prod": "pnpm run build && cross-env NODE_ENV=production node ./JS/server/server.js",
+    "lint": "eslint .",
+    "check-types": "tsc --noEmit"
   },
   "keywords": [],
   "author": "",

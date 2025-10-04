@@ -4,7 +4,9 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "build": "tsc && pnpm dlx tsc-alias"
+    "build": "tsc && pnpm dlx tsc-alias",
+    "lint": "eslint .",
+    "check-types": "tsc --noEmit"
   },
   "keywords": [],
   "author": "srajansaxena",
