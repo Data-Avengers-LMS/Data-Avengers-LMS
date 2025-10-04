@@ -16,7 +16,7 @@ export function serverExpress() {
 // should be responsible for starting, managing, and clustering the server
 // to ensure proper scaling and connection handling
 
-const __filename = fileURLToPath(import.meta.url);
-if (process.argv[1] === __filename) {
+const filename = fileURLToPath(import.meta.url);
+if (process.argv[1] === filename) {
   serverExpress();
 }
