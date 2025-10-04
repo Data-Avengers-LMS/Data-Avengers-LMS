@@ -54,13 +54,13 @@ _We don't just teach - we transform careers and boost employability through cutt
 <tr>
 <td align="center">
 
-### 🚀 **Lead Developer & Architect**
+### 🚀 **Technical Lead & Full-Stack Architect**
 
-<img src="https://img.shields.io/badge/Srajan_Sanjay_Saxena-FF6B6B?style=for-the-badge&logo=github&logoColor=white" alt="Lead">
+<img src="https://img.shields.io/badge/Srajan_Sanjay_Saxena-FF6B6B?style=for-the-badge&logo=github&logoColor=white" alt="Technical Lead">
 
-_🎯 Visionary • 🏗️ System Architect • 💡 Innovation Driver_
+_🎯 Technical Lead • 🏗️ System Architect • 💻 Full-Stack Developer • 🚀 DevOps & Deployment_
 
-`TypeScript` `React` `Node.js` `System Design`
+`Frontend` `Backend` `System Design` `Deployment` `DevOps`
 
 </td>
 </tr>
@@ -70,25 +70,26 @@ _🎯 Visionary • 🏗️ System Architect • 💡 Innovation Driver_
 <tr>
 <td align="center" width="50%">
 
-### 🔧 **Backend Wizards**
+### 🔧 **Backend Development Team**
 
+<img src="https://img.shields.io/badge/🚀_Srajan_Saxena-FF6B6B?style=for-the-badge" alt="Srajan Backend">
 <img src="https://img.shields.io/badge/🧙♂️_Vikas-4ECDC4?style=for-the-badge" alt="Vikas">
 <img src="https://img.shields.io/badge/🧙♀️_Harshita-4ECDC4?style=for-the-badge" alt="Harshita">
 
-_⚡ API Masters • 🗄️ Database Experts • 🔐 Security Specialists_
+_⚡ API Development • 🗄️ Database Design • 🔐 Security Implementation_
 
 `Express.js` `WebSocket` `Database Design` `Authentication`
 
 </td>
 <td align="center" width="50%">
 
-### 🎨 **Frontend Artist**
+### 🎨 **Frontend Development Team**
 
-<img src="https://img.shields.io/badge/👩🎨_Jiya-FFD93D?style=for-the-badge" alt="Jiya">
+<img src="https://img.shields.io/badge/🚀_Srajan_Saxena-FF6B6B?style=for-the-badge" alt="Srajan Frontend">
 
-_🎨 UI/UX Designer • 💫 Animation Expert • 📱 Responsive Specialist_
+_🎨 UI/UX Development • 💫 Component Architecture • 📱 Responsive Design_
 
-`React` `Tailwind CSS` `Figma` `User Experience`
+`React` `Next.js` `TypeScript` `Tailwind CSS` `Shadcn/UI`
 
 </td>
 </tr>
