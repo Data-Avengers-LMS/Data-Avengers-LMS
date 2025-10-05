@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
-import './globals.css';
-import { ThemeProvider } from '@theme-provider';
+import { ThemeProvider } from 'context/theme-provider';
+import '@repo/shadcn-next/styles/globals.css';
+import { themes } from '@repo/zod-schemas/constants/themes.js';
+import React from 'react';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -30,6 +32,7 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
+          themes={themes}
         >
           {children}
         </ThemeProvider>

@@ -6,7 +6,7 @@
     "build": {
       "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": [".next/**", "!.next/cache/**"],
+      "outputs": [".next/**", "!.next/cache/**", "JS/**"],
       "env": ["NODE_ENV"]
     },
     "lint": {
@@ -14,6 +14,22 @@
     },
     "check-types": {
       "dependsOn": ["^check-types"]
+    },
+    "test": {
+      "dependsOn": ["^test"],
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        "**/*.test.{js,ts,tsx}",
+        "**/*.spec.{js,ts,tsx}"
+      ]
+    },
+    "test:coverage": {
+      "dependsOn": ["^test:coverage"],
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        "**/*.test.{js,ts,tsx}",
+        "**/*.spec.{js,ts,tsx}"
+      ]
     },
     "dev": {
       "cache": false,
