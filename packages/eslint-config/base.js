@@ -95,9 +95,17 @@ export const config = [
     },
   },
 
+  // Redux Toolkit specific rules
+  {
+    files: ['**/redux-toolkit/**/*.ts'],
+    rules: {
+      'no-param-reassign': 'off',
+    },
+  },
+
   eslintConfigPrettier,
 
   {
-    ignores: ['dist/**', 'node_modules/**'],
+    ignores: ['dist/**', 'node_modules/**', '**/*.js', '**/*.jsx', 'JS/**'],
   },
 ];

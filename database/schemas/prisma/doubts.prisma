@@ -1,0 +1,22 @@
+
+
+model Doubt{
+     id String @id @default(cuid())
+     userId  String
+     user User  @relation(fields: [userId],references: [id])
+     question  String
+     reopened Boolean @default(false) 
+     isImportant Boolean @default(false)
+     responses DoubtResponse[]
+     createdAt DateTime @default(now())
+
+} 
+model DoubtResponse {
+    id       String   @id @default(cuid())
+    doubtId  String
+    userId   String  
+    user     User     @relation(fields: [userId], references: [id])
+    doubt    Doubt    @relation(fields: [doubtId], references: [id])
+    content  String
+    createdAt DateTime @default(now())
+}

@@ -1,0 +1,36 @@
+{
+  "name": "@repo/redux-toolkit",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "./JS/store/index.js",
+  "types": "./JS/store/index.d.ts",
+  "scripts": {
+    "build": "tsc && pnpm dlx tsc-alias",
+    "lint": "eslint .",
+    "check-types": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "exports": {
+    "./hooks/*": "./JS/hooks/*.js",
+    "./thunks/*": "./JS/thunks/*.js",
+    "./types/*": "./JS/types/*.js",
+    "./slices/*": "./JS/slices/*.js",
+    "./store/*": "./JS/store/*.js",
+    "./extraReducers/*": "./JS/extraReducers/*.js"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.9.0",
+    "react-redux": "^9.2.0",
+    "@repo/typescript-config": "workspace:*",
+    "@repo/eslint-config": "workspace:*",
+    "redux-persist": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.0",
+    "eslint": "^9.34.0",
+    "typescript": "^5.9.2"
+  }
+}
