@@ -3,7 +3,9 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@repo/shadcn-next/*": ["./src/*"],
+      "@repo/zod-schemas/*": ["../../common/*"],
+      "@repo/zod-schemas/constants/themes": ["../../common/constants/themes.ts"]
     },
     "plugins": [
       {
@@ -16,7 +18,9 @@
     "**/*.tsx",
     "next-env.d.ts",
     "next.config.js",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "tailwind.config.js",
+    "../../common/constants/themes.ts"
   ],
   "exclude": ["node_modules"]
 }

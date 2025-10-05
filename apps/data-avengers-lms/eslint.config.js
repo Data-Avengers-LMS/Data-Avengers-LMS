@@ -9,6 +9,7 @@ export default [
       'import/extensions': 'off',
       'import/no-extraneous-dependencies': 'off',
       '@typescript-eslint/no-unused-expressions': 'off',
+      'arrow-body-style': 'off',
     },
   },
 ];
