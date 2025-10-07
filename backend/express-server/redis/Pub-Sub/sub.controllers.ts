@@ -1,6 +1,18 @@
 import { Worker, Job } from 'bullmq';
 import { env } from '@repo/zod-schemas/environment/environments.z.js';
 
+interface UserCreatedMessage {
+  id: string;
+  name: string;
+}
+
+interface NotificationMessage {
+  title: string;
+  body: string;
+}
+
+type PubSubMessage = UserCreatedMessage | NotificationMessage;
+
 export class SubService {
   private worker: Worker;
 
@@ -33,17 +45,20 @@ export class SubService {
 
   private static async handleMessage(
     channel: string,
-    message: any
+    message: PubSubMessage
   ): Promise<void> {
     switch (channel) {
-      case 'user:created':
-        console.log(' User Created Event:', message);
+      case 'user:created': {
+        const user = message as UserCreatedMessage;
+        console.log('User Created Event:', user.id, user.name);
         break;
+      }
 
-      case 'notification':
-        console.log('Notification Event:', message);
+      case 'notification': {
+        const notif = message as NotificationMessage;
+        console.log('Notification Event:', notif.title, notif.body);
         break;
-
+      }
       default:
         console.log('Unknown channel:', channel);
         break;

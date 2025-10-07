@@ -16,10 +16,10 @@ export class WriteWorker {
   }
 
   private static async processJob(job: Job) {
-    console.log(`📌 Processing job: ${job.name}`, job.data);
+    console.log(`Processing job: ${job.name}`, job.data);
 
     if (job.name === 'create-file') {
-      console.log(`📝 Creating file at path: ${job.data.path}`);
+      console.log(` Creating file at path: ${job.data.path}`);
     }
   }
 
@@ -29,7 +29,34 @@ export class WriteWorker {
     );
 
     this.worker.on('failed', (job, err) =>
-      console.error(`Job ${job?.id} failed:`, err)
+      console.error(` Job ${job?.id} failed:`, err)
     );
   }
+
+  // Add public method for cleanup inside the class
+  public async close(): Promise<void> {
+    if (this.worker) {
+      await this.worker.close();
+    }
+  }
 }
+
+const runWorker = async () => {
+  const worker = new WriteWorker();
+  console.log(' Worker started and waiting for jobs...');
+
+  // Handle process termination
+  const shutdown = async () => {
+    console.log(' Shutting down worker...');
+    await worker.close();
+    process.exit(0);
+  };
+
+  process.on('SIGTERM', shutdown);
+  process.on('SIGINT', shutdown);
+};
+
+runWorker().catch((error) => {
+  console.error(' Worker error:', error);
+  process.exit(1);
+});
