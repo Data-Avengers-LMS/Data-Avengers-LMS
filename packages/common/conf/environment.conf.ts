@@ -27,6 +27,11 @@ const createInterfacialEnvironment = (path: string) => {
         .regex(/^\d+$/, 'Port must be a number')
         .transform(Number)
         .default(6379),
+      WORKER_CONCURRENCY: z
+        .string()
+        .regex(/^\d+$/, 'Worker concurrency must be a number')
+        .transform(Number)
+        .default(5),
     },
     clientPrefix: 'CLIENT',
     client: {

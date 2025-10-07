@@ -6,10 +6,13 @@ interface MessagePayload {
 }
 
 export class PubService {
+  public readonly channelName: string;
+
   private queue: Queue;
 
-  constructor() {
-    this.queue = new Queue('pub-sub', {
+  public constructor(channelName: string = 'pub-sub') {
+    this.channelName = channelName;
+    this.queue = new Queue(this.channelName, {
       connection: {
         host: env.REDIS_HOST,
         port: Number(env.REDIS_PORT),
@@ -23,6 +26,11 @@ export class PubService {
   ): Promise<void> {
     await this.queue.add(channel, { message });
   }
+
+  public async close(): Promise<void> {
+    await this.queue.close();
+  }
 }
 
+// Initialize with default channel name
 export const pubService = new PubService();

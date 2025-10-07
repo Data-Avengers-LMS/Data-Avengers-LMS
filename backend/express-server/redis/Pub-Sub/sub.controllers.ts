@@ -1,12 +1,15 @@
 import { Worker, Job } from 'bullmq';
 import { env } from '@repo/zod-schemas/environment/environments.z.js';
-// basic setup for a subscriber service using BullMQ
+
 export class SubService {
   private worker: Worker;
 
-  constructor() {
+  public readonly channelName: string;
+
+  public constructor(channelName: string = 'pub-sub', concurrency?: number) {
+    this.channelName = channelName;
     this.worker = new Worker(
-      'pub-sub',
+      this.channelName,
       async (job: Job) => {
         await SubService.handleMessage(job.name, job.data.message);
       },
@@ -15,12 +18,12 @@ export class SubService {
           host: env.REDIS_HOST,
           port: Number(env.REDIS_PORT),
         },
-        concurrency: 5,
+        concurrency: concurrency ?? env.WORKER_CONCURRENCY,
       }
     );
 
     this.worker.on('completed', (job) =>
-      console.log(`Message processed from ${job.name}`)
+      console.log(` Message processed from ${job.name}`)
     );
 
     this.worker.on('failed', (job, err) =>
