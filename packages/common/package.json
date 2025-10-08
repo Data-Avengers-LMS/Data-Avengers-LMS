@@ -18,7 +18,8 @@
     "./helper/*": "./JS/helper/*",
     "./constants/*": "./JS/constants/*",
     "./paths/*": "./JS/paths/*",
-    "./conf/*": "./JS/conf/*"
+    "./conf/*": "./JS/conf/*",
+    "./queues/*": "./JS/queues/*"
   },
   "dependencies": {
     "@t3-oss/env-core": "^0.13.8",

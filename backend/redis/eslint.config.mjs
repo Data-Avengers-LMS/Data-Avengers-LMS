@@ -7,6 +7,7 @@ export default [
     rules: {
       'import/no-unresolved': 'off',
       'no-console': 'off',
+      'arrow-body-style': 'off'
     }
   }
 ];

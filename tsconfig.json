@@ -6,11 +6,6 @@
       "@repo/*": ["./packages/*"]
     }
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "packages/shadcn/next/tailwind.config.js",
-    "database/Prisma/.turbo/prisma.config.ts"
-  ],
+  "include": ["**/*.ts", "**/*.tsx", "packages/shadcn/next/tailwind.config.js"],
   "exclude": ["node_modules", "dist", "build", ".next"]
 }
