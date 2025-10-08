@@ -1,0 +1,14 @@
+{
+  "extends": "@repo/typescript-config/base.json",
+  "compilerOptions": {
+    "outDir": "./JS",
+    "baseUrl": ".",
+    "paths": {
+      "@pub-sub/*": ["./Pub-Sub/*"],
+      "@bull-queues/*": ["Bull/Queues/*"],
+      "@redis-clients/*": ["./Client/*"],
+      "@bull-workers/*": ["Bull/Workers/*"]
+    }
+  },
+  "exclude": ["node_modules", "JS"]
+}

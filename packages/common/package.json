@@ -23,7 +23,6 @@
   },
   "dependencies": {
     "@t3-oss/env-core": "^0.13.8",
-    "bullmq": "^5.60.0",
     "dotenv": "^17.2.2",
     "lucide-react": "^0.544.0",
     "zod": "^4.1.11"

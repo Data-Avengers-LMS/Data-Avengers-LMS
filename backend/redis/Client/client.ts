@@ -1,5 +1,5 @@
+import { redisConnectionObject } from '@repo/zod-schemas/constants/redis.constant.js';
 import { Redis } from 'ioredis';
-import { env } from '@repo/zod-schemas/environment/environments.z.js';
 
 export class RedisService {
   private static instance: RedisService;
@@ -8,8 +8,7 @@ export class RedisService {
 
   private constructor() {
     this.client = new Redis({
-      host: env.REDIS_HOST,
-      port: env.REDIS_PORT,
+      ...redisConnectionObject,
       retryStrategy: (times) => Math.min(times * 50, 2000),
     });
 

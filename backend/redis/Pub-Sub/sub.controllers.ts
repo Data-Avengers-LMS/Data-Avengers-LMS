@@ -1,5 +1,6 @@
 import { Worker, Job } from 'bullmq';
 import { env } from '@repo/zod-schemas/environment/environments.z.js';
+import { redisConnectionObject } from '@repo/zod-schemas/constants/redis.constant.js';
 
 interface UserCreatedMessage {
   id: string;
@@ -26,10 +27,7 @@ export class SubService {
         await SubService.handleMessage(job.name, job.data.message);
       },
       {
-        connection: {
-          host: env.REDIS_HOST,
-          port: Number(env.REDIS_PORT),
-        },
+        connection: redisConnectionObject,
         concurrency: concurrency ?? env.WORKER_CONCURRENCY,
       }
     );
