@@ -198,6 +198,12 @@ importers:
 
   backend/redis:
     dependencies:
+      '@repo/eslint-config':
+        specifier: workspace:*
+        version: link:../../packages/eslint-config
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../../packages/typescript-config
       '@repo/zod-schemas':
         specifier: workspace:*
         version: link:../../packages/common
@@ -261,9 +267,6 @@ importers:
       '@t3-oss/env-core':
         specifier: ^0.13.8
         version: 0.13.8(typescript@5.9.2)(zod@4.1.11)
-      bullmq:
-        specifier: ^5.60.0
-        version: 5.61.0
       dotenv:
         specifier: ^17.2.2
         version: 17.2.2

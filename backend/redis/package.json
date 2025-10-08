@@ -13,6 +13,8 @@
   "license": "ISC",
   "dependencies": {
     "@repo/zod-schemas": "workspace:*",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
     "bullmq": "^5.60.0",
     "express": "^5.1.0",
     "ioredis": "^5.8.1"
