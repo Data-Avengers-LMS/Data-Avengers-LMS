@@ -11,7 +11,8 @@
       "@env/*": ["./environment/*"],
       "@/types/*": ["./types/*"],
       "@paths/*": ["./paths/*"],
-      "@constants/*": ["./constants/*"]
+      "@constants/*": ["./constants/*"],
+      "@/class/*": ["./Class/graphql/*"]
     }
   },
   "exclude": ["node_modules", "JS"]

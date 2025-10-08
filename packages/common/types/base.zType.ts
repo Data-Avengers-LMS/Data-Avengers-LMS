@@ -17,3 +17,9 @@ export const socketEventSchema = z.record(eventKeySchema, z.any());
 export type ISocketEvent = z.infer<typeof socketEventSchema>;
 
 export type ValidatedSocketEvents<T> = Brand<T, 'ValidatedEvents'>;
+
+// GraphQL Builder Types
+export interface AllowedGqlObj {
+  name: string;
+  fields: Array<string | AllowedGqlObj>;
+}
